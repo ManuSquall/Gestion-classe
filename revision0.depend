@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1573649232 source:d:\isi\licence iii 2019_2020\c++\exercice\revision0\main.cpp
+	<iostream>
+	"revision0.h"
+	<stdlib.h>
+
+1573615764 source:d:\isi\licence iii 2019_2020\c++\exercice\revision0\revision0.cpp
+	<iostream>
+	"revision0.h"
+
+1573648147 d:\isi\licence iii 2019_2020\c++\exercice\revision0\revision0.h
+	<string>
+	<vector>
+
