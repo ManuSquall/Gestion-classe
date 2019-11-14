@@ -21,12 +21,14 @@ struct ETUDIANT{
 
 //  prototypes
 CLASSE saisirClasse(int);
-void ajouterClasse(vector<CLASSE>, CLASSE);
+void ajouterClasse(CLASSE tabClass[], int nbrClass, CLASSE);
 void afficheClasse(CLASSE cl);
-void afficheTabClasse(vector<CLASSE>);
+void afficheTabClasse(CLASSE tabClass[], int nbrClass);
 int menu();
-void goMenu();
-void cls();
+
+ETUDIANT saisirEtudiant(int);
+void ajouterEtudiant(vector<ETUDIANT>, ETUDIANT);
+void afficherEtudiantParClasse(string);
 
 
 

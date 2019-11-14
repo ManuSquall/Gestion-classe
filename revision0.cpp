@@ -1,5 +1,7 @@
 #include <iostream>
 #include "revision0.h"
+#include <stdlib.h>
+#include <cstring>
 
 
 int menu(){
@@ -28,20 +30,24 @@ CLASSE saisirClasse(int a){
     return b;
 }
 
-//void ajouterClasse(vector<CLASSE> a, CLASSE b){
-//    a.push_back(b);
-//    cout <<endl <<a.size() <<endl ;
-//    cout <<endl <<"La classe " <<b.libelle <<" a bien ete ajoutee" <<endl;
-//}
+
+void ajouterClasse(CLASSE tabClass[], int nbrClass, CLASSE b){
+    tabClass[nbrClass].id = b.id;
+    tabClass[nbrClass].effectif = b.effectif;
+    tabClass[nbrClass].libelle= "yoga";
+    strncpy(tabClass[nbrClass].libelle, b.libelle,20);
+
+    nbrClass++;
+}
 
 
-void afficheTabClasse(vector<CLASSE> a){
-    //cout <<a.size();
-    for(int i(0); i<a.size(); i++)
+void afficheTabClasse(CLASSE tabClass[], int nbrClass){
+
+    for(int i(0); i<nbrClass; i++)
        {
-          cout <<endl <<"Nom classe: " <<a[i].libelle <<endl;
-          cout <<"Classe id: " << a[i].id << endl;
-          cout <<"Effectif: " << a[i].effectif << endl <<endl;
+          cout <<endl <<"Nom classe: " <<tabClass[i].libelle <<endl;
+          cout <<"Classe id: " << tabClass[i].id << endl;
+          cout <<"Effectif: " << tabClass[i].effectif << endl <<endl;
        }
 }
 

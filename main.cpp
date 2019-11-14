@@ -6,8 +6,13 @@ using namespace std;
 
 int main()
 {
-    vector <CLASSE> tabClass;
-    vector <ETUDIANT> tabEtu;
+    const int tailleTabClass = 25;
+    CLASSE tabClass[tailleTabClass];
+    int nbrClass = 0;
+
+    const int tailleTabEtu = 30;
+    ETUDIANT tabEtu[tailleTabEtu];
+    int nbrEtu = 0;
 
 
     menu:;
@@ -16,8 +21,7 @@ int main()
         system("cls");
         cout <<endl << "AJOUT DE CLASSE" <<endl <<endl;
 
-        //ajouterClasse(tabClass, saisirClasse(tabClass.size()));
-        tabClass.push_back(saisirClasse(tabClass.size()));
+        ajouterClasse(tabClass, nbrClass, saisirClasse(nbrClass));
 
         system("pause");
         system("cls");
@@ -27,7 +31,7 @@ int main()
         system("cls");
         cout <<endl << "AFFICHAGE DES CLASSES" <<endl <<endl;
 
-        afficheTabClasse(tabClass);
+        afficheTabClasse(tabClass, nbrClass);
 
         system("pause");
         system("cls");
@@ -35,8 +39,9 @@ int main()
         break;
     case 3:
         system("cls");
-
         cout <<endl << "AJOUT D'ETUDIANT" <<endl <<endl;
+
+        //tabEtu.push_back(saisirEtudiant(tabEtu.size()));
 
         system("pause");
         system("cls");
