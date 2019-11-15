@@ -21,14 +21,17 @@ struct ETUDIANT{
 
 //  prototypes
 CLASSE saisirClasse(int);
-void ajouterClasse(CLASSE tabClass[], int nbrClass, CLASSE);
+int ajouterClasse(CLASSE tabClass[], int nbrClass, CLASSE);
 void afficheClasse(CLASSE cl);
 void afficheTabClasse(CLASSE tabClass[], int nbrClass);
 int menu();
+ETUDIANT saisirEtudiant(int nbrEtu, CLASSE tabClass[], int nbrClass);
+int controleClasse(string, CLASSE tabClass[], int nbrClass);
+CLASSE getClasseByName(string, CLASSE tabClass[], int nbrClass);
+int ajouterEtudiant(ETUDIANT tabEtu[], int nbrEtu, ETUDIANT b);
 
-ETUDIANT saisirEtudiant(int);
-void ajouterEtudiant(vector<ETUDIANT>, ETUDIANT);
-void afficherEtudiantParClasse(string);
+
+void afficherEtudiantParClasse(ETUDIANT tabEtu[], int nbrEtu, CLASSE tabClass[], int nbrClass);
 
 
 

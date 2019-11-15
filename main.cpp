@@ -21,7 +21,7 @@ int main()
         system("cls");
         cout <<endl << "AJOUT DE CLASSE" <<endl <<endl;
 
-        ajouterClasse(tabClass, nbrClass, saisirClasse(nbrClass));
+        nbrClass= ajouterClasse(tabClass, nbrClass, saisirClasse(nbrClass));
 
         system("pause");
         system("cls");
@@ -41,7 +41,7 @@ int main()
         system("cls");
         cout <<endl << "AJOUT D'ETUDIANT" <<endl <<endl;
 
-        //tabEtu.push_back(saisirEtudiant(tabEtu.size()));
+        nbrEtu = ajouterEtudiant(tabEtu, nbrEtu, saisirEtudiant(nbrEtu, tabClass, nbrClass));
 
         system("pause");
         system("cls");
@@ -49,7 +49,12 @@ int main()
         break;
     case 4:
         system("cls");
-        cout << "case 4" <<endl;
+        cout <<endl << "AFFICHAGE D'ETUDIANT PAR CLASSE" <<endl <<endl;
+
+
+        afficherEtudiantParClasse(tabEtu, nbrEtu, tabClass, nbrClass);
+
+
         system("pause");
         system("cls");
         goto menu;
