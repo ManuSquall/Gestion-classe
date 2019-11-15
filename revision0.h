@@ -29,11 +29,9 @@ ETUDIANT saisirEtudiant(int nbrEtu, CLASSE tabClass[], int nbrClass);
 int controleClasse(string, CLASSE tabClass[], int nbrClass);
 CLASSE getClasseByName(string, CLASSE tabClass[], int nbrClass);
 int ajouterEtudiant(ETUDIANT tabEtu[], int nbrEtu, ETUDIANT b);
-
-
 void afficherEtudiantParClasse(ETUDIANT tabEtu[], int nbrEtu, CLASSE tabClass[], int nbrClass);
 
-
+void afficheClasseCroissant(CLASSE tabClass[], int nbrClass);
 
 
 

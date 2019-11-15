@@ -61,7 +61,11 @@ int main()
         break;
     case 5:
         system("cls");
-        cout << "case 5" <<endl;
+        cout <<endl << "AFFICHAGE CLASSE PAR ORDRE CROISSANT DU NOMBRE D'ETUDIANT" <<endl <<endl;
+
+        afficheClasseCroissant( tabClass, nbrClass);
+
+
         system("pause");
         system("cls");
         goto menu;

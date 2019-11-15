@@ -139,6 +139,22 @@ void afficherEtudiantParClasse(ETUDIANT tabEtu[], int nbrEtu, CLASSE tabClass[],
     }
 }
 
+void afficheClasseCroissant(CLASSE tabClass[], int nbrClass){
+    CLASSE svg;
+    for(int i(0); i<(nbrClass-1); i++){
+        for(int j(0); j<(nbrClass-1); j++){
+            if(tabClass[j].effectif > tabClass[j+1].effectif){
+                svg = tabClass[j];
+                tabClass[j]=tabClass[j+1];
+                tabClass[j+1]=svg;
+            }
+        }
+    }
+
+    afficheTabClasse(tabClass, nbrClass);
+
+}
+
 
 
 
